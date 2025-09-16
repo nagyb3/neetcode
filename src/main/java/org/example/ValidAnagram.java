@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class ValidAnagram {
 
     public boolean isAnagram(String s, String t) {
@@ -7,11 +9,14 @@ public class ValidAnagram {
         char[] sArray = s.toCharArray();
         char[] tArray = t.toCharArray();
 
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+
+        if (sArray.length != tArray.length) return false;
+
         for (int i = 0; i < sArray.length; i++) {
-            for (int j = 0; j < tArray.length; j++) {
-                if (sArray[i] != tArray[j]) {
-                    return false;
-                }
+            if (sArray[i] != tArray[i]) {
+                return false;
             }
         }
 
