@@ -2,12 +2,10 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+        String[] sampleInput = {"bdddddddddd","bbbbbbbbbbc"};
 
-        String s = "racecar";
-        String t = "carrace";
+        GroupAnagrams groupAnagrams = new GroupAnagrams();
 
-        ValidAnagram validAnagram = new ValidAnagram();
-
-        System.out.println(validAnagram.isAnagram(s, t));
+        System.out.println(groupAnagrams.groupAnagrams(sampleInput));
     }
 }
