@@ -2,8 +2,8 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        ValidParenthesis validParenthesis = new ValidParenthesis();
-        String sampleInput = "[({})]";
-        System.out.println( validParenthesis.isValid(sampleInput));
+        CheckIfDigitsI checkIfDigitsI = new CheckIfDigitsI();
+        String sampleInput = "3902";
+        System.out.println(checkIfDigitsI.hasSameDigits(sampleInput));
     }
 }
